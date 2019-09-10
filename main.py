@@ -8,14 +8,12 @@ r = requests.get(url)
 
 departures = {}
 
-
 if r.ok:
     rdata = r.json()
 
     for service in rdata["services"]:
         bus_no = int(service["service_name"])
-        if bus_no not in departures:
-            departures[bus_no] = []
+        departures[bus_no] = []
 
         for departure in service["departures"]:
             departures[bus_no].append(departure["minutes"])
