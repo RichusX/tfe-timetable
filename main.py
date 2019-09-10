@@ -1,5 +1,4 @@
 import requests
-import json
 
 base_url = "https://tfeapp.com/api/website/stop_times.php?stop_id="
 stop_id = "6200241910"
